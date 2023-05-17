@@ -38,8 +38,8 @@ def vigDec (cipherText, key):
     cipherText = cipherAlfa(cipherText)
     result = []
     plainText = ""
-    resultNumber = 0 
-    print(cipherText)
+    resultNumber = 0
+
     for i in range (0, len(cipherText)):
         resultNumber = (cipherText[i] - key[keyIndex] % 26)
 
@@ -58,6 +58,3 @@ def vigDec (cipherText, key):
 
 vigEnc("hatihatidijalan", 'bakanohentai')
 vigDec("iadiuoamqbjimax", 'bakanohentai')
- 
-#print(ord('B'))
-
