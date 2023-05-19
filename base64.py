@@ -1,4 +1,4 @@
-# Base64 character table
+# Base64 character table.
 base64_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 
 def base64_encode(data):
