@@ -62,7 +62,7 @@ def encrypt():
         cipher_text_entry.delete(0, tk.END)
         cipher_text_entry.insert(tk.END, cipher_text)
     else:
-        messagebox.showerror("Error", "Please enter all the required values.")
+        messagebox.showerror("Error", "Semua Wajib diberi nilai.")
 
 
 def decrypt():
@@ -75,45 +75,45 @@ def decrypt():
         plain_text_entry.delete(0, tk.END)
         plain_text_entry.insert(tk.END, plain_text)
     else:
-        messagebox.showerror("Error", "Please enter all the required values.")
+        messagebox.showerror("Error", "Semua wajib diberi Nilai.")
 
 
-# Create the main window
+# Buat Jendela Tkinter
 window = tk.Tk()
 window.title("Affine Cipher")
 window.geometry("400x200")
 
-# Create the labels
+# Buat label
 plain_text_label = tk.Label(window, text="Plain Text:")
 key_a_label = tk.Label(window, text="Key A:")
 key_b_label = tk.Label(window, text="Key B:")
 cipher_text_label = tk.Label(window, text="Cipher Text:")
 
-# Create the text entry fields
+# buat tombol masukan
 plain_text_entry = tk.Entry(window, width=30)
 key_a_entry = tk.Entry(window, width=10)
 key_b_entry = tk.Entry(window, width=10)
 cipher_text_entry = tk.Entry(window, width=30)
 
-# Create the buttons
+# buat tombol
 encrypt_button = tk.Button(window, text="Encrypt", command=encrypt)
 decrypt_button = tk.Button(window, text="Decrypt", command=decrypt)
 
-# Position the labels
+# posisi label cuy
 plain_text_label.grid(row=0, column=0, padx=10, pady=5, sticky=tk.W)
 key_a_label.grid(row=1, column=0, padx=10, pady=5, sticky=tk.W)
 key_b_label.grid(row=2, column=0, padx=10, pady=5, sticky=tk.W)
 cipher_text_label.grid(row=3, column=0, padx=10, pady=5, sticky=tk.W)
 
-# Position the text entry fields
+# posisi tombol masukan
 plain_text_entry.grid(row=0, column=1, padx=10, pady=5)
 key_a_entry.grid(row=1, column=1, padx=10, pady=5)
 key_b_entry.grid(row=2, column=1, padx=10, pady=5)
 cipher_text_entry.grid(row=3, column=1, padx=10, pady=5)
 
-# Position the buttons
+# posisi tombol
 encrypt_button.grid(row=4, column=0, padx=10, pady=10)
 decrypt_button.grid(row=4, column=1, padx=10, pady=10)
 
-# Start the GUI event loop
+# mulai program
 window.mainloop()
