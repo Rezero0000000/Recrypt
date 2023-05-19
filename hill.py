@@ -74,6 +74,6 @@ In the Hill cipher, the key matrix determines the encryption and decryption proc
 When you use the key "GYBNQKURP" and encrypt the plaintext "HELLO", the resulting ciphertext is "TFJJZX". 
 Then, when you decrypt the ciphertext using the same key, you should obtain the original plaintext "HELLO" again.
 
-The output "SGVsbG8sIFdvcmxkIQ" is the Base64 encoding of the string "Hello, World!" 
+The output "SGVsbG8sIFdvcmxkIQ" is the Base64 encoding of the string "Hello, World!", 
 but is not directly related to the Hill cipher encryption and decryption.
 """
