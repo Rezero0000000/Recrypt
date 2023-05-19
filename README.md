@@ -1,3 +1,2 @@
 #Recrypt
-
-a simple cli app to implements any classical cryptography method with python
+Implements Classical cryptography cipher with python
