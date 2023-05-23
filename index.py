@@ -1,3 +1,4 @@
+# Cipher
 import os as os
 os.system("cls")
 
@@ -41,7 +42,7 @@ def getCipher ():
 
 if (status == 1):
     cipher = getCipher()
-    from cipher import encrypt
+    print(cipher)
 elif (status == 2):
     print('2')
 else:
