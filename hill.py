@@ -43,7 +43,7 @@ def hill_cipher_encrypt(plaintext, key):
 
 def hill_cipher_decrypt(ciphertext, key):
     ciphertext = ciphertext.replace(" ", "").upper()
-    ciphertext_len = len(ciphertext)
+    ciphertext_len = le n(ciphertext)
     key_size = int(np.sqrt(len(key)))
     plaintext = ""
 
