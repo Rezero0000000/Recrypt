@@ -43,6 +43,3 @@ def affDec (cipherText, keyA, keyB):
                 plainText = plainText + alfabet[alfaIndex]
 
     return plainText
-
-print(affEnc("selamat datang di kelas kriptografi", 3, 10))
-print(affDec("mwrkukp tkpkxc ti owrkm ojidpacjkzi", 3, 10))

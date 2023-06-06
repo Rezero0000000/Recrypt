@@ -29,5 +29,4 @@ def dectrans (cipherText, key):
 
     return plainText
 
-print(enctrans("Hello World", 7))
-print(dectrans("Hoerllldo# #W#", 7))
+

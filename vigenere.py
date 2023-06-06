@@ -56,5 +56,3 @@ def vigDec (cipherText, key):
         plainText = plainText + number[result[i]]
     print(plainText)
 
-vigEnc("hatihatidijalan", 'bakanohentai')
-vigDec("iadiuoamqbjimax", 'bakanohentai')

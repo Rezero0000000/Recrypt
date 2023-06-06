@@ -31,6 +31,3 @@ def randomDec (cipherText):
                     plainText = plainText + alfabet[j]
     return plainText
 
-
-print(randomEnc("selamat datang di kelas kriptografi"))
-print(randomDec("fcsqkqi oqiqjb or wcsqf wzrvinbzqdr"))

@@ -35,24 +35,12 @@ def rotEnc (plainText, key):
                         
     print(cipherText, '\n')
 
-rotEnc("oyasumi oyasumi close your eyes and you leave this dream", 'rot13')
-rotEnc("blnfhzv blnfhzv pybfr lbhe rlrf naq lbh yrnir guvf qernz","rot13")
 
-rotEnc("oyasumi oyasumi close your eyes and you leave this dream", 'rot18')
-rotEnc("6gsac40 6gsac40 u36aw g6c9 wgwa s5v g6c 3wsdw bz0a v9ws4", 'rot18')
+# Example
 
+#rotEnc("oyasumi oyasumi close your eyes and you leave this dream", 'rot13')
+#rotEnc("blnfhzv blnfhzv pybfr lbhe rlrf naq lbh yrnir guvf qernz","rot13")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+#rotEnc("oyasumi oyasumi close your eyes and you leave this dream", 'rot18')
+#rotEnc("6gsac40 6gsac40 u36aw g6c9 wgwa s5v g6c 3wsdw bz0a v9ws4", 'rot18')
 
