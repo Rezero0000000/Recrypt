@@ -33,10 +33,10 @@ def dectrans(cipherText, key):
 
 plainText = "Hello, World! 123"
 key = 5
-encryptedText = enctrans(plainText, key)
-decryptedText = dectrans(encryptedText, key)
+encrypted = enctrans(plainText, key)
+decrypted = dectrans(encrypted, key)
 
-print("Pesan Asli:", plainText)
-print("Pesan Terenkripsi:", encryptedText)
-print("Pesan Terdekripsi:", decryptedText)
 
+print("Plaintext:", plainText)
+print("Encrypted Text:", encrypted)
+print("Decrypted Text:", decrypted)

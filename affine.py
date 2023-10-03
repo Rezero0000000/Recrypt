@@ -1,63 +1,45 @@
-def invers():
+alfabet = "abcdefghijklmnopqrstuvwxyz"
+
+def invers ():
     a_inv = 0
 
     for i in range(26):
-        flag = (3 * i) % 26
+        flag = (3 * i)%26
         if flag == 1:
             a_inv += i
 
     return a_inv
 
-def affEnc(plainText, keyA, keyB):
+def affEnc (plainText, keyA, keyB):
+    global alfabet
     cipherText = ""
+    
+    for i in range(0, len(plainText)):
 
-    for char in plainText:
+        if plainText[i] == " ":
+            cipherText = cipherText + " "
 
-        if char == " ":
-            cipherText += " "
+        for j in range(0, len(alfabet)):
 
-        elif char.isalpha():
-
-            is_upper = char.isupper()
-            char = char.lower()
-            ascii_val = ord(char) - ord('a')
-            alfaIndex = ((ascii_val * keyA) + keyB) % 26
-            cipherChar = chr(alfaIndex + ord('a'))
-
-            if is_upper:
-                cipherChar = cipherChar.upper()
-            cipherText += cipherChar
+            if plainText[i] == alfabet[j]:
+                alfaIndex = ((j*keyA) + keyB) % 26
+                cipherText = cipherText + alfabet[alfaIndex]
 
     return cipherText
 
-def affDec(cipherText, keyA, keyB):
+def affDec (cipherText, keyA, keyB):
+    global alfabet
     plainText = ""
 
-    for char in cipherText:
+    for i in range(0, len(cipherText)):
 
-        if char == " ":
-            plainText += " "
+        if cipherText[i] == " ":
+            plainText = plainText + " "
 
-        elif char.isalpha():
-            is_upper = char.isupper()
-            char = char.lower()
-            ascii_val = ord(char) - ord('a')
-            alfaIndex = ((invers() * (ascii_val - keyB)) % 26)
-            plainChar = chr(alfaIndex + ord('a'))
-
-            if is_upper:
-                plainChar = plainChar.upper()
-            plainText += plainChar
+        for j in range(0, len(alfabet)):
+          
+            if cipherText[i] == alfabet[j]:
+                alfaIndex = ((invers() * (j  - keyB)) % 26)
+                plainText = plainText + alfabet[alfaIndex]
 
     return plainText
-
-plainText = "Hello, World! 123"
-keyA = 5
-keyB = 7
-
-encrypted = affEnc(plainText, keyA, keyB)
-decrypted = affDec(encrypted, keyA, keyB)
-
-print("Pesan Asli:", plainText)
-print("Pesan Terenkripsi:", encrypted)
-print("Pesan Terdekripsi:", decrypted)

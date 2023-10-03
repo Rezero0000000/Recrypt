@@ -1,57 +1,55 @@
-alfabet = {'a':0,'b':1,'c':2,'d':3,'e':4,'f':5,'g':6,'h':7,'i':8,'j':9,'k':10,'l':11,'m':12,'n':13,'o':14,'p':15,'q':16,'r':17,'s':18,'t':19,'u':20,'v':21,'w':22,'x':23,'y':24,'z':25}
-number = {0:'a',1:'b',2:'c',3:'d',4:'e',5:'f',6:'g',7:'h',8:'i',9:'j',10:'k',11:'l',12:'m',13:'n',14:'o',15:'p',16:'q',17:'r',18:'s',19:'t',20:'u',21:'v',22:'w',23:'x',24:'y',25:'z'}
-
-def cipherAlfa (text):
-    global alfabet 
-    result = []
-
-    for i in range(0, len(text)):
-        result.append(alfabet[text[i]])
-
-    return result
-
-def vigEnc (plainText, key):
-    global number
-
-    key = cipherAlfa(key)
-    keyIndex = 0
-    plainText = cipherAlfa(plainText)
-    result = []
+def vigEnc(plainText, key):
     cipherText = ""
+    key = key.lower()
 
-    for i in range(0, len(plainText)):
-        result.append((plainText[i] + key[keyIndex]) % 26)
-        keyIndex = keyIndex + 1
-        
-        if keyIndex > (len(key) - 1):
-            keyIndex = 0
+    for i in range(len(plainText)):
+        if plainText[i].isalpha():
+           
+            plain_char = plainText[i].lower()
+            key_char = key[i % len(key)]
+            
+            shift = (ord(plain_char) + ord(key_char) - 2 * ord('a')) % 26
+            cipher_char = chr(shift + ord('a'))
 
-    for i in range(0, len(result)):
-        cipherText = cipherText + number[result[i]]
+            if plainText[i].isupper():
+                cipher_char = cipher_char.upper()
+            cipherText += cipher_char
 
-def vigDec (cipherText, key):
-    global number
+        else:
+            cipherText += plainText[i]
 
-    key = cipherAlfa(key)
-    keyIndex = 0
-    cipherText = cipherAlfa(cipherText)
-    result = []
+    return cipherText
+
+def vigDec(cipherText, key):
     plainText = ""
-    resultNumber = 0
+    key = key.lower()
 
-    for i in range (0, len(cipherText)):
-        resultNumber = (cipherText[i] - key[keyIndex] % 26)
+    for i in range(len(cipherText)):
+        if cipherText[i].isalpha():
+            
+            cipher_char = cipherText[i].lower()
+            key_char = key[i % len(key)]
+            
+            shift = (ord(cipher_char) - ord(key_char)) % 26
+            plain_char = chr(shift + ord('a'))
 
-        if resultNumber < 0:
-            resultNumber = ((cipherText[i] - key[keyIndex]) + 26) 
-       
-        result.append(resultNumber)
-        keyIndex = keyIndex + 1
+            if cipherText[i].isupper():
+                plain_char = plain_char.upper()
+            plainText += plain_char
 
-        if keyIndex > (len(key) - 1):
-            keyIndex = 0
+        else:
+            plainText += cipherText[i]
 
-    for i in range(0, len(result)):
-        plainText = plainText + number[result[i]]
-    print(plainText)
+    return plainText
+
+# Example
+plainText = "Hello, World! 123"
+key = "key"
+
+encrypted = vigEnc(plainText, key)
+decrypted = vigDec(encrypted, key)
+
+print("Plaintext:", plainText)
+print("Encrypted Text:", encrypted)
+print("Decrypted Text:", decrypted)
 
