@@ -32,6 +32,9 @@ def cipherList () :
           """)
 
     option = int(input(" Choose cipher: "))
+    if option < 0 or option > 5:
+        print(" salah tod")
+        return False 
     return option
 
 while True:
@@ -40,66 +43,73 @@ while True:
     print(" [1]. Encryption\n [2]. Decryption\n")
  
     try:
-        option = int(input("Your option: "))
+        option = int(input(" Your option: "))
         if option == 1 or option == 2:
             cipherType = cipherList() 
-            text = input("Enter the text: ")
+            if cipherType == False:
+                break
+
+            text = input("\n Enter the text: ")
             
             if cipherType == 1: 
-                keyA = int(input("key A : "))
-                keyB = int(input("key B : "))
+                keyA = int(input(" key A: "))
+                keyB = int(input(" key B: "))
 
                 if option == 1: 
                     encryptedText = affenc(text, keyA, keyB)
-                    print("Encrypted text:", encryptedText)
+                    print("\n Encrypted text: ", encryptedText)
 
                 elif option == 2:  
                     decryptedText = affdec(text, keyA, keyB)
-                    print("Decrypted text:", decryptedText)
+                    print("\n Decrypted text: ", decryptedText)
                     
             elif cipherType == 2: 
-                key = int(input("Key: "))
+                key = int(input(" Key: "))
                 
                 if option == 1:
                     encryptedText = encsar(text, key)
-                    print("Encrypted text:", encryptedText)
+                    print("\n Encrypted text: ", encryptedText)
 
                 elif option == 2: 
                     decryptedText = decsar(text, key)
-                    print("Decrypted text:", decryptedText)
+                    print("\n Decrypted text: ", decryptedText)
 
             elif cipherType == 3: 
-                key = str(input("Key [rot13/rot18] : "))
+                key = str(input("\n Key [rot13/rot18]: "))
                 
                 if option == 1 or option == 2:
                     encryptedText = rotenc(text, key)
-                    print("Encrypted text:", encryptedText)
+                    if (encryptedText == False):
+                        break
+
+                    print("\n Encrypted text: ", encryptedText)
 
             elif cipherType == 4: 
-                key = int(input("Key: "))
+                key = int(input(" Key: "))
                 
                 if option == 1:
                     encryptedText = enctrans(text, key)
-                    print("Encrypted text:", encryptedText)
+                    print("\n Encrypted text: ", encryptedText)
 
                 elif option == 2: 
                     decryptedText = dectrans(text, key)
-                    print("Decrypted text:", decryptedText)
+                    print("\n Decrypted text: ", decryptedText)
             
             elif cipherType == 5: 
-                key = str(input("Key: "))
+                key = str(input(" Key: "))
                 
                 if option == 1:
                     encryptedText = vigenc(text, key)
-                    print("Encrypted text:", encryptedText)
+                    print("\n Encrypted text: ", encryptedText)
 
                 elif option == 2: 
                     decryptedText = vigdec(text, key)
-                    print("Decrypted text:", decryptedText)
+                    print("\n Decrypted text: ", decryptedText)
             
             break
         else:
-            print("Invalid option. Please enter 1 or 2.")
+            print(" Invalid option. Please enter 1 or 2.")
+
     except ValueError:
-        print("\n- Invalid input. Please enter a valid integer. -")
+        print("\n - Invalid input. Please enter a valid integer. -")
         break

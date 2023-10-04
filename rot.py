@@ -43,7 +43,8 @@ def rotenc(plainText, key):
             else:
                 cipherText += char
         else:
-            print("Kunci yang salah")
+            print("\n Wrong key sir")
+            return False
 
     return cipherText
 

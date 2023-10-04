@@ -1,19 +1,19 @@
-alfabet = "abcdefghijklmnopqrstuvwxyz"
+alfabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-def invers ():
+def invers(keyA):
     a_inv = 0
 
-    for i in range(26):
-        flag = (3 * i)%26
+    for i in range(52): 
+        flag = (keyA * i) % 52
         if flag == 1:
             a_inv += i
 
     return a_inv
 
-def affenc (plainText, keyA, keyB):
+def affenc(plainText, keyA, keyB):
     global alfabet
     cipherText = ""
-    
+
     for i in range(0, len(plainText)):
 
         if plainText[i] == " ":
@@ -22,12 +22,12 @@ def affenc (plainText, keyA, keyB):
         for j in range(0, len(alfabet)):
 
             if plainText[i] == alfabet[j]:
-                alfaIndex = ((j*keyA) + keyB) % 26
+                alfaIndex = ((j * keyA) + keyB) % 52
                 cipherText = cipherText + alfabet[alfaIndex]
 
     return cipherText
 
-def affdec (cipherText, keyA, keyB):
+def affdec(cipherText, keyA, keyB):
     global alfabet
     plainText = ""
 
@@ -37,9 +37,10 @@ def affdec (cipherText, keyA, keyB):
             plainText = plainText + " "
 
         for j in range(0, len(alfabet)):
-          
+
             if cipherText[i] == alfabet[j]:
-                alfaIndex = ((invers() * (j  - keyB)) % 26)
+                alfaIndex = ((invers(keyA) * (j - keyB)) % 52)
                 plainText = plainText + alfabet[alfaIndex]
 
     return plainText
+
