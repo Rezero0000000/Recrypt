@@ -1,8 +1,8 @@
 from affine import affenc, affdec
 from caesar import encsar, decsar
-#from rot import rotecn
+from rot import rotenc
 from transposition import enctrans, dectrans
-from vignere import vigenc, vigdec
+from vigenere import vigenc, vigdec
 
 import os
 
@@ -38,13 +38,13 @@ while True:
     print(icon)
     print(" [1]. Encryption\n [2]. Decryption\n")
  
-    option = int(input(" Your option : "))
-    
-    if option == 1:
-        cipherList()
-        break
-    elif option == 2:
-        cipherList()
-        break
-    else:
+    try:
+        option = int(input("Your option: "))
+        if option == 1 or option == 2:
+            cipherList()
+            break
+        else:
+            print("Invalid option. Please enter 1 or 2.")
+    except ValueError:
+        print("\n- Invalid input. Please enter a valid integer. -")
         break
