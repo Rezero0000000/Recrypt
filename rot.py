@@ -45,7 +45,7 @@ def rotenc(plainText, key):
         else:
             print("Kunci yang salah")
 
-    print(cipherText, '\n')
+    return cipherText
 
 # Exmaple 
 #rotEnc("oyasumi oyasumi close your eyes and you leave this dream", 'rot13')
