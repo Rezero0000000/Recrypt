@@ -31,12 +31,12 @@ def dectrans(cipherText, key):
 
 # Example
 
-plainText = "Hello, World! 123"
-key = 5
-encrypted = enctrans(plainText, key)
-decrypted = dectrans(encrypted, key)
+#plainText = "Hello, World! 123"
+#key = 5
+#encrypted = enctrans(plainText, key)
+#decrypted = dectrans(encrypted, key)
 
 
-print("Plaintext:", plainText)
-print("Encrypted Text:", encrypted)
-print("Decrypted Text:", decrypted)
+#print("Plaintext:", plainText)
+#print("Encrypted Text:", encrypted)
+#print("Decrypted Text:", decrypted)

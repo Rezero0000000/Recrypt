@@ -40,7 +40,7 @@ def decsar(cipherText, key):
     return plainText
 
 # Example 
-plainText = "Hello, World!"
-print("Plaintext:", plainText)
-print("Encrypted Text:", encsar(plainText, 3))
-print("Decrypted Text:", decsar("Khoor, Zruog!", 3))
+#plainText = "Hello, World!"
+#print("Plaintext:", plainText)
+#print("Encrypted Text:", encsar(plainText, 3))
+#print("Decrypted Text:", decsar("Khoor, Zruog!", 3))

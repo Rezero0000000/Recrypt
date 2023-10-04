@@ -10,7 +10,7 @@ def invers ():
 
     return a_inv
 
-def affEnc (plainText, keyA, keyB):
+def affenc (plainText, keyA, keyB):
     global alfabet
     cipherText = ""
     
@@ -27,7 +27,7 @@ def affEnc (plainText, keyA, keyB):
 
     return cipherText
 
-def affDec (cipherText, keyA, keyB):
+def affdec (cipherText, keyA, keyB):
     global alfabet
     plainText = ""
 

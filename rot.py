@@ -1,7 +1,7 @@
 rot13 = 'abcdefghijklmnopqrstuvwxyz'
 rot18 = 'abcdefghijklmnopqrstuvwxyz0123456789'
 
-def rotEnc(plainText, key):
+def rotenc(plainText, key):
     global rot13
     global rot18
 
@@ -48,9 +48,9 @@ def rotEnc(plainText, key):
     print(cipherText, '\n')
 
 # Exmaple 
-rotEnc("oyasumi oyasumi close your eyes and you leave this dream", 'rot13')
-rotEnc("blnfhzv blnfhzv pybfr lbhe rlrf naq lbh yrnir guvf qernz", 'rot13')
+#rotEnc("oyasumi oyasumi close your eyes and you leave this dream", 'rot13')
+#rotEnc("blnfhzv blnfhzv pybfr lbhe rlrf naq lbh yrnir guvf qernz", 'rot13')
 
-rotEnc("oyasumi oyasumi close your eyes and you leave this dream", 'rot18')
-rotEnc("6gsac40 6gsac40 u36aw g6c9 wgwa s5v g6c 3wsdw bz0a v9ws4", 'rot18')
+#rotEnc("oyasumi oyasumi close your eyes and you leave this dream", 'rot18')
+#rotEnc("6gsac40 6gsac40 u36aw g6c9 wgwa s5v g6c 3wsdw bz0a v9ws4", 'rot18')
 

@@ -1,4 +1,4 @@
-def vigEnc(plainText, key):
+def vigenc(plainText, key):
     cipherText = ""
     key = key.lower()
 
@@ -20,7 +20,7 @@ def vigEnc(plainText, key):
 
     return cipherText
 
-def vigDec(cipherText, key):
+def vigdec(cipherText, key):
     plainText = ""
     key = key.lower()
 
@@ -43,13 +43,13 @@ def vigDec(cipherText, key):
     return plainText
 
 # Example
-plainText = "Hello, World! 123"
-key = "key"
+#plainText = "Hello, World! 123"
+#key = "key"
 
-encrypted = vigEnc(plainText, key)
-decrypted = vigDec(encrypted, key)
+#encrypted = vigEnc(plainText, key)
+#decrypted = vigDec(encrypted, key)
 
-print("Plaintext:", plainText)
-print("Encrypted Text:", encrypted)
-print("Decrypted Text:", decrypted)
+#print("Plaintext:", plainText)
+#print("Encrypted Text:", encrypted)
+#print("Decrypted Text:", decrypted)
 
