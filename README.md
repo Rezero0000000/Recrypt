@@ -1,7 +1,10 @@
 # Recrypt
 
 This project is an implementation of various classic ciphers using Python from scratch. The project includes several classic ciphers such as Affine Cipher, Caesar Cipher, Rot Cipher, Transposition Cipher, and Vigenere Cipher.
-
+<div> 
+<img src='./screenshoot/Screenshot1.png' alt='screenshoot 1' width='300' style='margin-left: 30px;'>
+<img src='./screenshoot/Screenshot2.png' alt='screenshoot 1' width='300' style='margin-left: 30px;'>
+</div>
 ## Table of Contents
 
 - [Installation](#installation)
