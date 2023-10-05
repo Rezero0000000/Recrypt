@@ -3,8 +3,8 @@
 This project is an implementation of various classic ciphers using Python from scratch. The project includes several classic ciphers such as Affine Cipher, Caesar Cipher, Rot Cipher, Transposition Cipher, and Vigenere Cipher.
 
 <div> 
-<img src='./screenshoot/Screenshot1.png' alt='screenshoot 1' width='280' style='margin-left: 30px;'>
-<img src='./screenshoot/Screenshot2.png' alt='screenshoot 1' width='280' style='margin-left: 30px;'>
+  <img src='./screenshoot/Screenshot1.png' alt='screenshoot 1' width='280' style='margin-left: 30px;'>
+  <img src='./screenshoot/Screenshot2.png' alt='screenshoot 1' width='280' style='margin-left: 30px;'>
 </div>
 
 ## Table of Contents
@@ -69,4 +69,4 @@ To run this project, make sure you have Python installed. No additional installa
 - Decryption: `vigdec(encrypted_text, key)`
 
 Make sure to replace `plain_text` and `key` with the text you want to encrypt and the key you want to use.
-
+Author: Schwartz
