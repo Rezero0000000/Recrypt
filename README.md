@@ -69,4 +69,5 @@ To run this project, make sure you have Python installed. No additional installa
 - Decryption: `vigdec(encrypted_text, key)`
 
 Make sure to replace `plain_text` and `key` with the text you want to encrypt and the key you want to use.
+
 Author: Schwartz
