@@ -48,7 +48,7 @@ def rotenc(plainText, key):
 
     return cipherText
 
-# Exmaple 
+# Example 
 #rotEnc("oyasumi oyasumi close your eyes and you leave this dream", 'rot13')
 #rotEnc("blnfhzv blnfhzv pybfr lbhe rlrf naq lbh yrnir guvf qernz", 'rot13')
 
