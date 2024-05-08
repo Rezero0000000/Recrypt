@@ -19,7 +19,7 @@ This project is an implementation of various classic ciphers using Python from s
 
 ## Installation
 
-To run this project, make sure you have Python installed. No additional installation is required. Simply download or copy the project's code.
+To run this project make sure you have Python installed. No additional installation is required. Simply download or copy the project's code.
 
 ## Usage
 
